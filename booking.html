@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset = "utf-8">
+    <title> Booking </title>
+    <style type="text/css">
+      input:invalid {
+        border: solid red !important;
+      }
+    </style>
+  </head>
+
+
+  <body>
+    <table>
+      <form method = "post" action="/">
+      <tr>
+        <td><label>First Name: </label></td>
+        <td><input type = "text" name = "first_name" id = "first_name" placeholder = "Ahmad" maxlength = "20" required></td>
+      </tr>
+      <tr>
+        <td><label>Last Name: </label></td>
+        <td><input type = "text" name = "last_name" id = "last_name" placeholder = "Waseem" maxlength = "20" required></td>
+      </tr>
+      <tr>
+        <td><label>Phone Number: </label></td>
+        <!--<td><input type = "tel" name = "phone_number" id = "phone_number" placeholder = "Phone Number" max = "10" required></td>-->
+        <td><input type="tel" id="phone_number" name="phone_number" placeholder="0551234345" pattern="[0-9]{10}" required></td>
+      </tr>
+      <tr>
+        <td><label>Email: </label></td>
+        <td><input type = "email" name = "email" id = "email" placeholder = "abc@example.com" maxlength = "40" required></td>
+      </tr>
+      <tr>
+        <td><label>Departure: </label></td>
+        <td>
+          <select name="departure" id="departure" required>
+              <option value="Abu Dhabi">Abu Dhabi</option>
+              <option value="Dubai">Dubai</option>
+              <option value="Sharjah">Sharjah</option>
+              <option value="Ajman">Ajman</option>
+              <option value="RAK">Ras-Al-Khaimah</option>
+              <option value="UAQ">Umm-Al-Quwain</option>
+              <option value="Fujairah">Fujairah</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label>Destination: </label></td>
+          <td>
+            <select name="destination" id="destination" required>
+                <option value="Dubai">Dubai</option>
+                <option value="Abu Dhabi">Abu Dhabi</option>
+                <option value="Sharjah">Sharjah</option>
+                <option value="Ajman">Ajman</option>
+                <option value="RAK">Ras-Al-Khaimah</option>
+                <option value="UAQ">Umm-Al-Quwain</option>
+                <option value="Fujairah">Fujairah</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label>Date: </label></td>
+            <td><input type="date" name="date" id="date" required></td>
+          </tr>
+          <tr>
+            <td><label>Time: </label></td>
+            <td>
+              <select name="time" id="time" required>
+                <optgroup label="Day Trips">
+                  <option value="6AM">06:00</option>
+                  <option value="9AM">09:00</option>
+                  <option value="12PM">12:00</option>
+                  <option value="3PM">15:00</option>
+                </optgroup>
+                <optgroup label="Evening Trips">
+                  <option value="6PM">18:00</option>
+                  <option value="9PM">21:00</option>
+                  <option value="12AM">00:00</option>
+                  <option value="3AM">03:00</option>
+                </optgroup>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label>Seat Class: </label></td>
+            <td>
+              <select name="class" id="class" required>
+                <option value="Economic">Economic -- Starting from AED 50</option>
+                <option value="Standard">Standard -- Starting from AED 75</option>
+                <option value="First_Class">First Class -- Starting from AED 150</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="submit" value="Confirm Booking"></td>
+            <td><input type="reset" value="Clear"></td>
+          </tr>
+
+        </form>
+      </table>
+    </body>
+</html>
